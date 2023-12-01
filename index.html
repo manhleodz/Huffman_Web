@@ -148,21 +148,21 @@
   </section>
 
   <div class="list-image project py-5">
-    <div class="info1" style="justify-content: center; align-items: center;">
-      <img class="image1" src="./assets//manhleo.png" />
+    <div class="info1" id="anh1" style="justify-content: center; align-items: center;">
+      <img class="image1" src="./assets//waterpig.jpg" />
       <h1>Đào Đạt</h1>
     </div>
-    <div class="info1" style="justify-content: center; align-items: center;">
+    <div class="info1" id="anh2" style="justify-content: center; align-items: center;">
       <img class="image1" src="./assets//manhleo.png" />
-      <h1>Đào Đạt</h1>
+      <h1>Mạnh Leo</h1>
     </div>
-    <div class="info1" style="justify-content: center; align-items: center;">
-      <img class="image1" src="./assets//manhleo.png" />
-      <h1>Đào Đạt</h1>
+    <div class="info1" id="anh3" style="justify-content: center; align-items: center;">
+      <img class="image1" src="./assets//dung.jpg" />
+      <h1>Ngọc Dũng</h1>
     </div>
-    <div class="info1" style="justify-content: center; align-items: center;">
-      <img class="image1" src="./assets//manhleo.png" />
-      <h1>Đào Đạt</h1>
+    <div class="info1" id="anh4" style="justify-content: center; align-items: center;">
+      <img class="image1" src="./assets//khang.jpg" />
+      <h1>Đinh Khang</h1>
     </div>
   </div>
 
@@ -172,23 +172,22 @@
       <div class="row">
 
         <div class="col-lg-6 col-12">
-          <h2 class="mb-4">Experiences</h2>
+          <h2 class="mb-4">Main tasks</h2>
 
           <div class="timeline">
             <div class="timeline-wrapper">
               <div class="timeline-yr">
-                <span>2019</span>
+                <span>Đạt</span>
               </div>
               <div class="timeline-info">
-                <h3><span>Project Manager</span><small>Best Studio</small></h3>
-                <p>Proin ornare non purus ut rutrum. Nulla facilisi. Aliquam laoreet libero ac pharetra feugiat. Cras ac
-                  fermentum nunc, a faucibus nunc.</p>
+                <h3><span>Leader</span><small>Cư bụ</small></h3>
+                <p>😍manners maketh man👌</p>
               </div>
             </div>
 
             <div class="timeline-wrapper">
               <div class="timeline-yr">
-                <span>2018</span>
+                <span>Mạnh</span>
               </div>
               <div class="timeline-info">
                 <h3><span>UX Designer</span><small>Digital Ace</small></h3>
@@ -198,7 +197,7 @@
 
             <div class="timeline-wrapper">
               <div class="timeline-yr">
-                <span>2016</span>
+                <span>Dũng</span>
               </div>
               <div class="timeline-info">
                 <h3><span>UI Freelancer</h3>
@@ -209,7 +208,7 @@
 
             <div class="timeline-wrapper">
               <div class="timeline-yr">
-                <span>2014</span>
+                <span>Khang</span>
               </div>
               <div class="timeline-info">
                 <h3><span>Junior Designer<small>Crafted Co.</small></h3>
@@ -284,8 +283,6 @@
               <p><a href="mailto:hello@company.co">doanducmanh_t66@hus.edu.vn</a></p>
             </div>
             <ul class="social-links">
-              <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left" title="Dribbble"></a>
-              </li>
               <li><a href="#" class="uil uil-instagram" data-toggle="tooltip" data-placement="left"
                   title="Instagram"></a></li>
               <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a>
@@ -352,19 +349,36 @@
 
 <style>
   .list-image {
-    /* display: flex !important;
-    justify-content: center; */
+    display: flex !important;
+    justify-content: center;
   }
 
   .image1 {
-    width: 150px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 99%;
     margin: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.4) !important;
   }
 
   .info1 {
     display: flex;
+    flex-direction: column;
     font-size: 15px;
+  }
+
+  @media (max-width: 1200px) {
+    .info1 {
+      flex-direction: row;
+    }
+    .list-image {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      margin-left: 50px;
+    }
   }
 </style>
 
