@@ -17,7 +17,7 @@ class MinHeap {
 	empty() {
 		return (this.size() === 0);
 	}
-	
+
 	/// insert a new value in the heap 
 	push(value) {
 		this.heap_array.push(value);
@@ -128,7 +128,7 @@ class Codec {
 		}
 		return '0' + this.make_string(node[1][0]) + '1' + this.make_string(node[1][1]);
 	}
-	
+
 	/// make string into huffman tree
 	make_tree(tree_string) {
 		let node = [];
@@ -161,7 +161,7 @@ class Codec {
 		}
 		if (mp.size === 0) {
 			let final_string = "zer#";
-			
+
 			let output_message = "Compression complete and file sent for download. " + '\n' + "Compression Ratio : " + (data.length / final_string.length).toPrecision(6);
 			return [final_string, output_message];
 		}
@@ -225,7 +225,7 @@ class Codec {
 			temp += data[k];
 			k++;
 		}
-		if (k == data.length){
+		if (k == data.length) {
 			alert("Invalid File!\nPlease submit a valid compressed .txt file to decompress and try again!");
 			location.reload();
 			return;
@@ -326,7 +326,7 @@ window.onload = function () {
 	step1 = document.getElementById("step1");
 	step2 = document.getElementById("step2");
 	step3 = document.getElementById("step3");
-	
+
 
 	isSubmitted = false;
 	codecObj = new Codec();
@@ -343,9 +343,9 @@ window.onload = function () {
 		if (extension != "txt") {
 			alert("Invalid file type (." + extension + ") \nPlease upload a valid .txt file and try again!");
 			return;
-		}				
+		}
 		alert("File submitted!");
-		isSubmitted = true;		
+		isSubmitted = true;
 		onclickChanges("Done!! File uploaded !", step1);
 	}
 
@@ -362,15 +362,15 @@ window.onload = function () {
 			return;
 		}
 		console.log(uploadedFile.size);
-		if(uploadedFile.size === 0){
+		if (uploadedFile.size === 0) {
 			alert("WARNING: You have uploaded an empty file!\nThe compressed file might be larger in size than the uncompressed file (compression ratio might be smaller than one).\nBetter compression ratios are achieved for larger file sizes!");
-		}	
-		else if(uploadedFile.size <= 350){
-			alert("WARNING: The uploaded file is very small in size (" + uploadedFile.size +" bytes) !\nThe compressed file might be larger in size than the uncompressed file (compression ratio might be smaller than one).\nBetter compression ratios are achieved for larger file sizes!");
 		}
-		else if(uploadedFile.size < 1000){
-			alert("WARNING: The uploaded file is small in size (" + uploadedFile.size +" bytes) !\nThe compressed file's size might be larger than expected (compression ratio might be small).\nBetter compression ratios are achieved for larger file sizes!");
-		}	
+		else if (uploadedFile.size <= 350) {
+			alert("WARNING: The uploaded file is very small in size (" + uploadedFile.size + " bytes) !\nThe compressed file might be larger in size than the uncompressed file (compression ratio might be smaller than one).\nBetter compression ratios are achieved for larger file sizes!");
+		}
+		else if (uploadedFile.size < 1000) {
+			alert("WARNING: The uploaded file is small in size (" + uploadedFile.size + " bytes) !\nThe compressed file's size might be larger than expected (compression ratio might be small).\nBetter compression ratios are achieved for larger file sizes!");
+		}
 		onclickChanges("Done!! Your file will be Compressed", step2);
 		onclickChanges2("Compressing your file ...", "Compressed");
 		var fileReader = new FileReader();
@@ -413,7 +413,7 @@ window.onload = function () {
 function onclickChanges(firstMsg, step) {
 	step.innerHTML = "";
 	let img = document.createElement("img");
-	img.src = "assets/done.png";
+	img.src = "assets/wired-flat-37-approve-checked-simple.gif";
 	img.id = "doneImg";
 	step.appendChild(img);
 	var br = document.createElement("br");
@@ -453,7 +453,7 @@ function myDownloadFile(fileName, text) {
 function ondownloadChanges(outputMsg) {
 	step3.innerHTML = "";
 	let img = document.createElement("img");
-	img.src = "assets/done.png";
+	img.src = "assets/wired-flat-37-approve-checked-simple.gif";
 	img.id = "doneImg";
 	step3.appendChild(img);
 	var br = document.createElement("br");
@@ -465,6 +465,7 @@ function ondownloadChanges(outputMsg) {
 }
 
 
-$("form").on("change", ".file-upload-field", function(){ 
-    $(this).parent(".file-upload-wrapper").attr("data-text",         $(this).val().replace(/.*(\/|\\)/, '') );
+$("form").on("change", ".file-upload-field", function () {
+	$(this).parent(".file-upload-wrapper").attr("data-text", $(this).val().replace(/.*(\/|\\)/, ''));
 });
+

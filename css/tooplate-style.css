@@ -471,6 +471,23 @@ b, strong {
   color: #ffc200;
 }
 
+.card-header {
+  background:rgba(245, 241, 171, 0.58);
+}
+
+.dark-mode .bigdiv {
+  color: white;
+}
+
+.dark-mode .card-header {
+  color: white;
+  background: #000000;
+}
+
+.dark-mode .align {
+  background: #000000;
+}
+
 @media (min-width: 1270px) {
   .owl-theme .owl-dots {
     position: relative;

@@ -1,78 +1,18 @@
-/* 
-	Author : Samir Paul
-*/
-*{
-    color: rgb(3, 5, 87);
-    font-family: Arial, Helvetica, sans-serif;
-}
-h2{
-    /* color: black; */
-    font-style: italic;
-    /* text-decoration: underline;    */
-}
-h3{
-    color: black;
-    font-style: italic;
-    text-decoration: underline;
-}
-#heading {
-    margin-left: 1%;
-    margin-right: 1%;
-    font-size: 130%;
-}
-.align{
-    /* padding: 1.5%; */
-    padding-left: 17%;
-    padding-right: 12%;
-    padding-bottom: 0.05%;
-    /* background-color: rgb(182, 179, 179); */
-    font-size: medium;
-    
-}
-.bigdiv{
-    margin-left: 5%;
-    margin-right: 5%;
-    /* border: rgb(0, 0, 0) solid 2px; */
-    
-    /* background-color: rgb(182, 179, 179) ; */
-}
-
-.links{
-    color: rgb(11, 11, 251);
-    background-color: rgb(189, 201, 206);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* font-weight:+ bold; */
-    font-size: large;
-}
-.links:hover{
-    color: rgb(3, 3, 128);
-    background-color: rgb(2, 158, 158);
-}
-
 .form{
-    /* background-color: rgb(182, 179, 179) ; */
     font-family: Arial, Helvetica, sans-serif;
-    /* font-size: x-small; */
     display: inline-block;
 }
 .input{
     font-size: x-small;
-     /*  background-color: rgb(182, 179, 179); */
 }
 
 #text1{
     font-size: xx-small;
-    /* background-color: rgb(182, 179, 179) ; */
 }
 #text4{
     font-size: small;
 }
-/* #encode{
-    background-color: rgb(97, 153, 97);
-} */
-/* #decode{
-    background-color: rgb(172, 75, 75);
-} */
+
 #encode:disabled{
     background-color: rgb(182, 179, 179);
 }
@@ -81,6 +21,7 @@ h3{
 }
 .button {
     background: #FF4742;
+    width: 200px;
     border: 1px solid #FF4742;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
@@ -292,41 +233,79 @@ h3{
   }
 
 
-
-
-
-  
-
-
   .upload-button {
-    background: linear-gradient(to bottom right, #ff0000, #3c00ff);
-    border: 0;
-    border-radius: 12px;
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size: 16px;
+    min-width: 100px;
+    min-height: 4FD1C50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
     font-weight: 700;
-    line-height: 2.5;
-    outline: transparent;
-    padding: 0 1rem;
-    text-align: center;
-    text-decoration: none;
-    transition: box-shadow .2s ease-in-out;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  upload-button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
   }
   
-  .upload-button:not([disabled]):focus {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  .upload-button:hover, .upload-button:focus {
+    color: #313133;
+    transform: translateY(-6px);
   }
   
-  .upload-button:not([disabled]):hover {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  .upload-button:hover::before, .upload-button:focus::before {
+    opacity: 1;
+  }
+  
+  .upload-button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  .upload-button:hover::after, .upload-button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
   }
 
-
-  
