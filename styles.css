@@ -1,3 +1,9 @@
+body {
+    padding: 8rem 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 .form{
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
@@ -133,6 +139,7 @@
         font-size: large;
     }
 }
+
 @media(min-width:1090px){
     #heading {
         margin-left: 17%;

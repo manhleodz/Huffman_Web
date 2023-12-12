@@ -137,19 +137,19 @@
   <div class="list-image project py-5">
     <div class="info1" id="anh1" style="justify-content: center; align-items: center;">
       <img class="image1" src="./assets//waterpig.jpg" />
-      <h1>Đào Đạt</h1>
+      <h1 class="username1">Đào Đạt</h1>
     </div>
-    <div class="info1" id="anh2" style="justify-content: center; align-items: center;">
-      <img class="image1" src="./assets//manhleo.png" />
-      <h1>Mạnh Leo</h1>
+    <div class="info2" id="anh2" style="justify-content: center; align-items: center;">
+      <img class="image2" src="./assets//manhleo.png" />
+      <h1 class="username2">Mạnh Leo</h1>
     </div>
-    <div class="info1" id="anh3" style="justify-content: center; align-items: center;">
-      <img class="image1" src="./assets//dung.jpg" />
-      <h1>Ngọc Dũng</h1>
+    <div class="info3" id="anh3" style="justify-content: center; align-items: center;">
+      <img class="image3" src="./assets//dung.jpg" />
+      <h1 class="username3">Ngọc Dũng</h1>
     </div>
-    <div class="info1" id="anh4" style="justify-content: center; align-items: center;">
-      <img class="image1" src="./assets//khang.jpg" />
-      <h1>Đinh Khang</h1>
+    <div class="info4" id="anh4" style="justify-content: center; align-items: center;">
+      <img class="image4" src="./assets//khang.jpg" />
+      <h1 class="username4">Đinh Khang</h1>
     </div>
   </div>
 
@@ -251,7 +251,52 @@
     box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.4) !important;
   }
 
+  .image2 {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 99%;
+    margin: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .image3 {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 99%;
+    margin: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .image4 {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 99%;
+    margin: 30px 30px 30px 30px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.4) !important;
+  }
+
   .info1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+  }
+
+  .info2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+  }
+
+  .info3 {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+  }
+
+  .info4 {
     display: flex;
     flex-direction: column;
     font-size: 15px;
@@ -259,6 +304,18 @@
 
   @media (max-width: 1200px) {
     .info1 {
+      flex-direction: row;
+    }
+
+    .info2 {
+      flex-direction: row;
+    }
+
+    .info3 {
+      flex-direction: row;
+    }
+
+    .info4 {
       flex-direction: row;
     }
 
@@ -270,6 +327,55 @@
       margin-left: 50px;
     }
   }
+
+  
+@media (max-width: 600px) {
+  
+  .image1 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .image2 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .image3 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .image4 {
+    width: 100px;
+    height: 100px;
+  }
+  .animated-info {
+		min-width: 200px;
+	}
+  .animated-item {
+    font-size: 30px;
+  }
+
+  .custom-btn-group {
+    text-align: center;
+  }
+
+  .custom-btn {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .owl-theme .owl-nav {
+    display: none;
+  }
+
+  .timeline-info small {
+    display: block;
+    margin: 10px 0 0 0;
+  }
+
+}
 </style>
 
 </html>

@@ -105,7 +105,6 @@ class MinHeap {
 /// coder decoder class
 class Codec {
 
-
 	/// dfs
 	getCodes(node, curr_code) {
 		/// is leaf node
@@ -329,6 +328,7 @@ window.onload = function () {
 
 
 	isSubmitted = false;
+	let dinhdang;
 	codecObj = new Codec();
 
 	/// called when submit button is clicked
@@ -340,7 +340,8 @@ window.onload = function () {
 		}
 		let nameSplit = uploadedFile.name.split('.');
 		var extension = nameSplit[nameSplit.length - 1].toLowerCase();
-		if (extension != "txt") {
+		dinhdang = extension
+		if (extension != "txt" && extension != "py" && extension != "java" && extension != "png") {
 			alert("Invalid file type (." + extension + ") \nPlease upload a valid .txt file and try again!");
 			return;
 		}
@@ -361,7 +362,6 @@ window.onload = function () {
 			alert("File not submitted.\nPlease click the submit button on the previous step\nto submit the file and try again!");
 			return;
 		}
-		console.log(uploadedFile.size);
 		if (uploadedFile.size === 0) {
 			alert("WARNING: You have uploaded an empty file!\nThe compressed file might be larger in size than the uncompressed file (compression ratio might be smaller than one).\nBetter compression ratios are achieved for larger file sizes!");
 		}
@@ -403,8 +403,24 @@ window.onload = function () {
 			let [decodedString, outputMsg] = codecObj.decode(text);
 			myDownloadFile(uploadedFile.name.split('.')[0] + "_decompressed.txt", decodedString);
 			ondownloadChanges(outputMsg);
+
+//
+			const uint8Array = new Uint8Array(text.length);
+			for (let i = 0; i < text.length; i++) {
+				uint8Array[i] = text.charCodeAt(i);
+			}
+
+			const decodedBlob = new Blob([uint8Array], { type: 'image/jpg' });
+			const downloadLink = document.createElement('a');
+			downloadLink.href = URL.createObjectURL(decodedBlob);
+			downloadLink.download = 'decoded_image.jpg';
+			downloadLink.click();
+
+//
+
 		}
 		fileReader.readAsText(uploadedFile, "UTF-8");
+
 	}
 
 }

@@ -565,6 +565,8 @@ b, strong {
     margin: 10px 0 0 0;
   }
 }
+
+
 @media (max-width: 320px) {
   .animated-text {
     margin-top: 0;
@@ -590,4 +592,6 @@ b, strong {
     display: inline-block;
     vertical-align: top;
   }
+
 }
+
