@@ -175,6 +175,12 @@ body {
     }
 }
 
+/* @media(max-width:768px){
+    .upload-button {
+        width:10px;
+    }
+} */
+
 
 .file-input-button {
     cursor: pointer;
@@ -192,8 +198,6 @@ body {
     cursor: pointer;
   }
   
-  
-
   .reload-button {
     align-items: center;
     appearance: none;
@@ -241,6 +245,7 @@ body {
 
 
   .upload-button {
+    margin-top: 10px;
     min-width: 100px;
     min-height: 4FD1C50px;
     font-family: 'Nunito', sans-serif;

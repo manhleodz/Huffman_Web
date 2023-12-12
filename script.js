@@ -409,20 +409,16 @@ window.onload = function () {
 // 			for (let i = 0; i < text.length; i++) {
 // 				uint8Array[i] = text.charCodeAt(i);
 // 			}
-
 // 			const decodedBlob = new Blob([uint8Array], { type: 'image/jpg' });
 // 			const downloadLink = document.createElement('a');
 // 			downloadLink.href = URL.createObjectURL(decodedBlob);
 // 			downloadLink.download = 'decoded_image.jpg';
 // 			downloadLink.click();
-
 // //
 
 		}
 		fileReader.readAsText(uploadedFile, "UTF-8");
-
 	}
-
 }
 
 /// changes dom when step 1 and is complete ( step 2 is running)
