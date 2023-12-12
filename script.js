@@ -341,7 +341,7 @@ window.onload = function () {
 		let nameSplit = uploadedFile.name.split('.');
 		var extension = nameSplit[nameSplit.length - 1].toLowerCase();
 		dinhdang = extension
-		if (extension != "txt" && extension != "py" && extension != "java" && extension != "png") {
+		if (extension != "txt" && extension != "py" && extension != "java") {
 			alert("Invalid file type (." + extension + ") \nPlease upload a valid .txt file and try again!");
 			return;
 		}
@@ -404,19 +404,19 @@ window.onload = function () {
 			myDownloadFile(uploadedFile.name.split('.')[0] + "_decompressed.txt", decodedString);
 			ondownloadChanges(outputMsg);
 
-//
-			const uint8Array = new Uint8Array(text.length);
-			for (let i = 0; i < text.length; i++) {
-				uint8Array[i] = text.charCodeAt(i);
-			}
+// //
+// 			const uint8Array = new Uint8Array(text.length);
+// 			for (let i = 0; i < text.length; i++) {
+// 				uint8Array[i] = text.charCodeAt(i);
+// 			}
 
-			const decodedBlob = new Blob([uint8Array], { type: 'image/jpg' });
-			const downloadLink = document.createElement('a');
-			downloadLink.href = URL.createObjectURL(decodedBlob);
-			downloadLink.download = 'decoded_image.jpg';
-			downloadLink.click();
+// 			const decodedBlob = new Blob([uint8Array], { type: 'image/jpg' });
+// 			const downloadLink = document.createElement('a');
+// 			downloadLink.href = URL.createObjectURL(decodedBlob);
+// 			downloadLink.download = 'decoded_image.jpg';
+// 			downloadLink.click();
 
-//
+// //
 
 		}
 		fileReader.readAsText(uploadedFile, "UTF-8");
